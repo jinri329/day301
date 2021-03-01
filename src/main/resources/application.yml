@@ -1,0 +1,17 @@
+#server:
+#  port: 8081
+#yml后缀的配置文件 通过有缩进、有关系展示的配置
+#student:
+#  name: zyy
+#  age: 22
+#版本切换 可以使用不同版本 默认端口号 还有开发版本 上线版本
+#server:
+#  port: 8088
+#
+#--- 这样使用三根横杠就可以区分成另一个文件了
+
+#server:
+#  port: 8080
+#spring:
+#  profiles:
+#    active: dev
