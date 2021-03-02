@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!-- 映射文件 -->
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.zyy.day301.dao.TeacherDao">
+    <insert id="addTeacher" parameterType="com.zyy.day301.bean.Teacher" >
+        INSERT INTO edu_teacher (id,t_name,t_level,phone) VALUE (#{id},#{tName},#{tLevel},#{phone})
+    </insert>
+    <update id="upTeacher" parameterType="int" >
+        UPDATE edu_teacher INTO t_name=#,t_level,phone
+    </update>
+    <delete id="delTeacher" parameterType="int" >
+        DELETE FROM edu_teacher WHERE id=#{id}
+    </delete>
+    <select id="findTeacherAll" resultType="com.zyy.day301.bean.Teacher">
+        SELECT * FROM edu_teacher
+    </select>
+</mapper>

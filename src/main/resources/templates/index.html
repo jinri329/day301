@@ -6,7 +6,36 @@
     <title>Title</title>
 </head>
 <body>
-    <p th:text="${username}">我是一个p标签</p>
-    <img th:src="${imgs}"/>
+<!--<p th:text="${username}">我是一个p标签</p>
+<img th:src="${imgs}"/>
+<table th:if="${a!=null}">
+<tr>
+    <td>姓名</td>
+    <td>年龄</td>
+    <td>邮箱</td>
+</tr>
+<tr th:each="list:${a}">
+    <td th:text="${list.name}"></td>
+    <td th:text="${list.age}"></td>
+    <td th:text="${list.email}"></td>
+</tr>
+<tr>
+    <td th:text="${#dates.format(date,'yyyy-MM-dd HH:mm:ss')}" ></td>
+</tr>
+</table>-->
+<table th:if="${t!=null}">
+    <tr>
+        <td>id</td>
+        <td>姓名</td>
+        <td>等级</td>
+        <td>电话</td>
+    </tr>
+    <tr th:each="list:${t}">
+        <td th:text="${list.id}"></td>
+        <td th:text="${list.tName}"></td>
+        <td th:text="${list.tLevel}"></td>
+        <td th:text="${list.phone}"></td>
+    </tr>
+</table>
 </body>
 </html>

@@ -15,6 +15,15 @@ public class User implements Serializable{
     @Email(message = "邮箱不合法")//校验是否是合法的邮箱地址
     private String email;
 
+    public User(@NotEmpty(message = "用户名错误") String name, @Range(min = 1, max = 100, message = "年龄错误") int age, @Email(message = "邮箱不合法") String email) {
+        this.name = name;
+        this.age = age;
+        this.email = email;
+    }
+
+    public User() {
+    }
+
     @Override
     public String toString() {
         return "User{" +
